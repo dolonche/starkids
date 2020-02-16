@@ -1,0 +1,32 @@
+.title-section {
+	font-size: 34px;
+	color: $main-color;
+	position: relative;
+	text-align: center;
+	margin-top: 70px;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	overflow-x: hidden;
+	
+
+	&::before {
+		content: "";
+		position: absolute;
+		height: 3px;
+		background-color: $main-color;
+		width: 100%;
+		top: 50%;
+		transform: translate(calc(-50% - 169px), -50%);
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		height: 3px;
+		background-color: $main-color;
+		width: 100%;
+		top: 50%;
+		transform: translate(calc(50% + 169px), -50%);
+	}
+}

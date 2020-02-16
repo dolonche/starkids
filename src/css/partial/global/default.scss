@@ -1,0 +1,30 @@
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	color: $main-color;
+	letter-spacing: -0.25px;
+	display: flex;
+	flex-direction: column;
+	color: $main-color;
+}
+
+a {
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+}
+
+p {
+	font-size: 18px;
+	line-height: 26px;
+	color: #5c597b;
+}
+
+h1 {
+	font-size: 44px;
+	line-height: 50px;
+	color: #fff;
+}
+
+h2 {
+	font-size: 34px;
+}

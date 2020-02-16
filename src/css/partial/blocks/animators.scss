@@ -1,0 +1,10 @@
+.animators {
+	clip-path: ellipse(58% 53% at 50% 82%);
+	z-index: 1000;
+	margin-top: -80px;
+	background-color: #fff;
+	&__content {
+		@extend %container;
+		@extend %grid-padding;
+	}
+}

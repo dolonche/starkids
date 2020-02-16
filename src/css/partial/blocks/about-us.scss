@@ -1,0 +1,48 @@
+.about-us {
+	margin-top: -125px;
+	padding-top: 60px;
+	background-image: url(../img/about-us.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__content {
+		@extend %container;
+		@extend %grid-padding;
+		overflow-x: hidden;
+	}
+	&__grid{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		&-item{
+			background-color: #fff;
+			border-radius: 10px;
+			width: calc(25% - 20px);
+			padding-top: 30px;
+			padding-bottom: 30px;
+			margin-bottom: 80px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			&-img{
+				text-align: center;
+				img{
+					height: 105px;
+					width: auto;
+				}
+			}
+			&-title{
+				margin-top: 30px;
+				font-size: 19px;
+			}
+			&-descr{
+				text-align: center;
+				margin-top: 19px;
+				
+			}
+		}
+	}
+
+
+}

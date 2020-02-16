@@ -1,0 +1,18 @@
+.page-header{
+  background-color: #2c2a3f;
+  &__content{
+    @extend %container;
+    @extend %grid-padding;
+    display: flex;
+  }
+  &__logo{
+    padding-top: 23px;
+    padding-bottom: 23px;
+    box-sizing: border-box;
+    margin-right: 66px;
+    &-image{
+      width: 123px;
+      height: auto;
+    }
+  }
+}

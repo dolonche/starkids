@@ -1,0 +1,13 @@
+@import 'partial/global/normalize';
+@import 'partial/global/fonts';
+@import 'partial/global/variable';
+@import 'partial/global/mixins';
+@import 'partial/global/default';
+@import 'partial/blocks/page-header';
+@import 'partial/blocks/main-nav';
+@import 'partial/blocks/main-screen';
+@import 'partial/blocks/about-us';
+@import 'partial/blocks/animators';
+@import 'partial/blocks/title-section';
+@import 'partial/blocks/button';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
