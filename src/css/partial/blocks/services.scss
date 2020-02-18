@@ -1,0 +1,120 @@
+.services {
+	display: flex;
+	flex-direction: column;
+	padding-top: 284px;
+	background-image: url(../img/alisa-v-strane.png);
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: translateY(-284px);
+	margin-bottom: -284px;
+	padding-bottom: 24px;
+	z-index: -11;
+	position: relative;
+	top: 100%;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 780px;
+		background-image: url(../img/program.png);
+		background-position: center top;
+		background-size: cover;
+		background-repeat: no-repeat;
+		top: calc(100% - 207px);
+	}
+
+	&__content {
+		@extend %container;
+		@extend %grid-padding;
+		display: flex;
+		flex-direction: column;
+		z-index: 1000;
+	}
+
+	&__grid {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 60px;
+		position: sticky;
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #fff;
+			border-radius: 10px;
+			padding-top: 25px;
+			padding-bottom: 37px;
+			box-sizing: border-box;
+			padding-left: 20px;
+			padding-right: 20px;
+			width: calc(33.333333% - 13px);
+			box-shadow: $shadow;
+
+			&-level {
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				margin-bottom: 15px;
+
+				&-img {
+					width: 25px;
+					height: 23px;
+					margin-right: 5px;
+				}
+			}
+
+			&-title {
+				font-size: 20px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 25px;
+			}
+
+			&-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				margin-bottom: 12px;
+				width: 100%;
+
+				&-item {
+					position: relative;
+					padding-left: 32px;
+					margin-bottom: 18px;
+
+					&::before {
+						content: "";
+						position: absolute;
+						width: 14px;
+						height: 14px;
+						background-color: $main-color;
+						left: 0;
+						top: 7px;
+						transform: rotate(45deg) translateY(-50%);
+					}
+				}
+			}
+
+			&-price {
+				&-old {
+					margin-top: auto;
+					font-size: 25px;
+					opacity: 0.7;
+					text-decoration: line-through;
+					margin-bottom: 8px;
+					font-weight: 500;
+				}
+
+				&-new {
+					font-size: 32px;
+					margin-bottom: 25px;
+					font-weight: 500;
+				}
+			}
+		}
+
+	}
+}

@@ -31,4 +31,10 @@
 		left: 0;
 		transform: translate(calc(50% + 169px), -50%);
 	}
+	&--w{
+		color: #fff;
+		&::before, &::after{
+			background-color: #fff;
+		}
+	}
 }
