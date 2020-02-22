@@ -1,5 +1,6 @@
 .program {
 	transform: translateY(-25px);
+	padding-bottom: 10px;
 
 	&__content {
 		@extend %container;
@@ -8,8 +9,8 @@
 
 	&__title {
 		font-size: 28px;
-		margin-top: 46px;
-		margin-bottom: 36px;
+		margin-top: 35px;
+		margin-bottom: 20px;
 		text-align: center;
 		font-weight: 500;
 	}
@@ -19,6 +20,7 @@
 		width: 100%;
 		flex-wrap: wrap;
 		justify-content: space-between;
+
 
 		&-item {
 			margin-bottom: 25px;
@@ -37,7 +39,8 @@
 				height: 52px;
 				width: 60px;
 			}
-			&-name{
+
+			&-name {
 				margin-top: 15px;
 			}
 		}

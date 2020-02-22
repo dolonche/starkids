@@ -1,0 +1,111 @@
+.contacts {
+	margin-top: -50px;
+	padding-top: 50px;
+	background-image: url(../img/logo45-grey.svg);
+	background-size: 83px 115px;
+	background-position: 0 -10px;
+	background-repeat: repeat;
+
+	&__content {
+		@extend %container;
+		@extend %grid-padding;
+	}
+
+	&__link {
+		margin-top: 53px;
+		padding-bottom: 113px;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+
+		&-mail {
+			display: flex;
+
+			&-image {
+				height: 34px;
+				width: auto;
+				margin-right: 15px;
+			}
+
+			&-value {
+				text-decoration: none;
+				color: $main-color;
+				margin-top: auto;
+				margin-bottom: auto;
+				transition: 0.4s opacity;
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+
+		&-phone {
+			display: flex;
+
+			&-image {
+				height: 34px;
+				width: auto;
+				margin-right: 15px;
+				transform: scale(-1, 1);
+			}
+
+			&-value {
+				text-decoration: none;
+				color: $main-color;
+				margin-top: auto;
+				margin-bottom: auto;
+				transition: 0.4s opacity;
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+
+		&-social {
+			display: flex;
+
+			&-item {
+				font-size: 0;
+				margin-left: 25px;
+				height: 34px;
+				width: 34px;
+				transition: 0.4s opacity;
+
+				&:hover {
+					opacity: 0.7;
+				}
+
+				&--insta {
+					background-image: url(../img/insta.svg);
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center;
+
+				}
+
+				&--telegram {
+					background-image: url(../img/telegram.svg);
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+
+				&--viber {
+					background-image: url(../img/viber.svg);
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+
+				&--whatsapp {
+					background-image: url(../img/whatsapp.svg);
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+		}
+	}
+}

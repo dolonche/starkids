@@ -1,0 +1,24 @@
+.reviews {
+	background-image: url(../img/review.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	padding-top: 140px;
+	margin-top: -200px;
+	padding-bottom: 75px;
+	z-index: 100;
+	
+	&__content {
+		@extend %container;
+		@extend %grid-padding;
+	}
+	&__video{
+		margin-top: 53px;
+		margin-left: 85px;
+		margin-right: 85px;
+		iframe{
+			width: 100%;
+			height: 600px;
+		}
+	}
+}
