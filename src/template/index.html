@@ -15,8 +15,8 @@
 			<div class="main-screen__content">
 				<h1 class="main-screen__title">Агенство по организации детских праздников в Москве</h1>
 				<span class="main-screen__subtitle">Гарантируем весёлый и интересный праздник</span>
-				<button type="button" class="button">Связаться с нами</button>
-				<a class="main-screen__arrow" href="!#"></a>
+				<button type="button" class="button" data-popup="form">Связаться с нами</button>
+				<a class="main-screen__arrow" onclick="$('.about-us .title-section').animatescroll();"></a>
 			</div>
 		</section>
 		<section class="about-us">
@@ -107,6 +107,13 @@
 						</div>
 						<button type="button" class="button button--card">Подробнее</button>
 					</div>
+					<div class="animators__grid-item">
+						<b class="animators__grid-item-title">Капитан-Америка</b>
+						<div class="animators__grid-item-image">
+							<img src="img/anim4.png" alt="">
+						</div>
+						<button type="button" class="button button--card">Подробнее</button>
+					</div>
 				</div>
 				<button type="button" class="button">Все персонажи</button>
 			</div>
@@ -126,7 +133,7 @@
 						</ul>
 						<span class="services__grid-item-price-old">12 000 ₽</span>
 						<span class="services__grid-item-price-new">9 500 ₽</span>
-						<button class="button button--card">Заказать</button>
+						<button class="button button--card" data-popup="form">Заказать</button>
 					</div>
 					<div class="services__grid-item">
 						<div class="services__grid-item-level">
@@ -140,7 +147,7 @@
 						</ul>
 						<span class="services__grid-item-price-old">18 000 ₽</span>
 						<span class="services__grid-item-price-new">12 500 ₽</span>
-						<button class="button button--card">Заказать</button>
+						<button class="button button--card" data-popup="form">Заказать</button>
 					</div>
 					<div class="services__grid-item">
 						<div class="services__grid-item-level">
@@ -157,7 +164,7 @@
 						</ul>
 						<span class="services__grid-item-price-old">55 000 ₽</span>
 						<span class="services__grid-item-price-new">35 500 ₽</span>
-						<button class="button button--card">Заказать</button>
+						<button class="button button--card" data-popup="form">Заказать</button>
 					</div>
 				</div>
 			</div>
@@ -324,6 +331,26 @@
 		</section>
 	</main>
 	//= include/footer.html
+	<div class="overlay"></div>
+	<form action="" class="popup-form">
+		<div class="popup-form__close"></div>
+		<b class="popup-form__title">Наш специалист свяжется с вами
+			и ответит на все вопросы.</b>
+		<div class="popup-form__bunch">
+			<label for="name">
+				<input type="text" id="name" name="name" required>
+				<div>Имя</div>
+			</label>
+		</div>
+		<div class="popup-form__bunch">
+			<label for="tel">
+				<input type="tel" id="tel" name="tel" required>
+				<div>Телефон</div>
+			</label>
+		</div>
+		<button type="submit" class="popup-form__button">Заказать</button>
+	</form>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="js/app.min.js"></script>
 </body>
 

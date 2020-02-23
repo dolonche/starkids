@@ -1,19 +1,47 @@
-.main-nav{
+.main-nav {
 	flex-grow: 2;
 	margin-top: auto;
 	margin-bottom: auto;
-	&__list{
+
+	&__list {
 		width: 100%;
 		list-style: none;
 		display: flex;
 		padding: 0;
 		margin: 0;
 		justify-content: space-between;
-		&-item{
-			&-link{
+
+		&-item {
+			&-link {
 				color: #fff;
 				text-decoration: none;
 				font-size: 17px;
+				cursor: pointer;
+				position: relative;
+				margin-top: 3px;
+				padding-bottom: 3px;
+				overflow-y: hidden;
+				display: block;
+				
+				
+
+				&::after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					top: 100%;
+					left: 0;
+					background-color: #fff;
+					transition: 0.4s transform;
+
+				}
+
+				&:hover {
+					&::after{
+						transform: translateY(-2px);
+					}
+				}
 			}
 		}
 	}

@@ -9,6 +9,9 @@ body {
 	max-width: 1920px;
 	margin-left: auto;
 	margin-right: auto;
+	&.page-body--overlay{
+		overflow-y: hidden;
+	}
 }
 
 a {

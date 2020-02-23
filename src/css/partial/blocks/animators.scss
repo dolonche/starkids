@@ -1,12 +1,12 @@
 .animators {
-	// clip-path: ellipse(130% 99% at 50% 102%);
 	z-index: 1000;
 	margin-top: -80px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	&::before{
-		content:"";
+
+	&::before {
+		content: "";
 		transform: rotate(180deg);
 		position: absolute;
 		width: 100%;
@@ -55,6 +55,11 @@
 				margin-right: 0;
 			}
 
+			&:nth-child(n+9) {
+				display: none;
+
+			}
+
 			&-title {
 				width: 198px;
 				height: 47px;
@@ -69,25 +74,32 @@
 				transform: translateY(-50%);
 				background-color: #fff;
 			}
-			&-image{
+
+			&-image {
 				margin-top: -23px;
 				padding-top: 10px;
 				height: 360px;
 				width: 100%;
 				display: flex;
-				justify-content: center; 
+				justify-content: center;
 				align-content: center;
 				margin-bottom: -10px;
-				
-				& img{
+
+				& img {
 					height: 100%;
 					width: auto;
 
 				}
 			}
-			& .button{
+
+			& .button {
 				transform: translateY(50%);
 			}
 		}
 	}
+	&--open &__grid-item {
+			&:nth-child(n+9) {
+				display: flex;
+			}
+		}
 }
