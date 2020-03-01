@@ -29,6 +29,13 @@
 		justify-content: center;
 		align-items: center;
 		padding-top: 20px;
+		&--open {
+			.animators__grid-item {
+				&:nth-child(n+9) {
+					display: flex;
+				}
+			}
+		}
 	}
 
 	&__grid {
@@ -73,6 +80,7 @@
 				border-radius: 8px;
 				transform: translateY(-50%);
 				background-color: #fff;
+				font-weight: 500;
 			}
 
 			&-image {
@@ -90,6 +98,9 @@
 					width: auto;
 
 				}
+			}
+			&-hidden{
+				display: none;
 			}
 
 			& .button {

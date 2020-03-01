@@ -9,9 +9,14 @@ body {
 	max-width: 1920px;
 	margin-left: auto;
 	margin-right: auto;
-	&.page-body--overlay{
+
+	&.page-body--overlay {
 		overflow-y: hidden;
 	}
+}
+
+* {
+	outline-color: $main-color;
 }
 
 a {
@@ -33,4 +38,8 @@ h1 {
 
 h2 {
 	font-size: 34px;
+}
+
+b {
+	font-weight: 500;
 }

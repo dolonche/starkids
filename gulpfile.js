@@ -6,8 +6,12 @@ var gulp = require('gulp'),
   cssmin = require('gulp-minify-css'),
   uglify = require('gulp-uglify'),
   rigger = require('gulp-rigger'),
-  imagemin = require('gulp-imagemin'),
   imageminJpegRecompress = require('imagemin-jpeg-recompress'),
+  imagemin = require('gulp-imagemin'),
+  imageminPngquant = require('imagemin-pngquant'),
+  imageminZopfli = require('imagemin-zopfli'),
+  imageminMozjpeg = require('imagemin-mozjpeg'), //need to run 'brew install libpng'
+  imageminGiflossy = require('imagemin-giflossy'),
   rimraf = require('rimraf'),
   sourcemaps = require('gulp-sourcemaps'),
   rename = require('gulp-rename'),
@@ -93,17 +97,42 @@ gulp.task('image:build', function() {
 });
 gulp.task('imagescontent:build', function() {
   gulp.src(path.src.contentImg)
-    .pipe(imagemin([
-      imagemin.gifsicle(),
-      imageminJpegRecompress({
-        loops: 4,
-        min: 70,
-        max: 80,
-        quality: 'medium'
+    .pipe((imagemin([
+      //png
+      imageminPngquant({
+        speed: 1,
+        quality: [0.6, 0.8] //lossy settings
       }),
-      imagemin.optipng(),
-      imagemin.svgo()
-    ]))
+      imageminZopfli({
+        more: true
+        // iterations: 50 // very slow but more effective
+      }),
+      //gif
+      // imagemin.gifsicle({
+      //     interlaced: true,
+      //     optimizationLevel: 3
+      // }),
+      //gif very light lossy, use only one of gifsicle or Giflossy
+      imageminGiflossy({
+        optimizationLevel: 3,
+        optimize: 3, //keep-empty: Preserve empty transparent frames
+        lossy: 2
+      }),
+      //svg
+      imagemin.svgo({
+        plugins: [{
+          removeViewBox: false
+        }]
+      }),
+      //jpg lossless
+      imagemin.jpegtran({
+        progressive: true
+      }),
+      //jpg very light lossy, use vs jpegtran
+      imageminMozjpeg({
+        quality: 70
+      })
+    ])))
     .pipe(gulp.dest(path.build.contentImg))
     .pipe(connect.reload())
 });
