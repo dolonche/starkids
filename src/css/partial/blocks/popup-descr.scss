@@ -112,3 +112,8 @@
 		}
 	}
 }
+@media #{$mobile-widths}  {
+	.popup-descr{
+		width: calc(100% - 20px);
+	}
+}

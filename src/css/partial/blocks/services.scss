@@ -36,7 +36,6 @@
 		display: flex;
 		justify-content: space-between;
 		margin-top: 60px;
-		position: sticky;
 
 		&-item {
 			display: flex;
@@ -115,5 +114,31 @@
 			}
 		}
 
+	}
+}
+
+@media #{$mobile-widths} {
+	.services {
+		&::after{
+			height: 1150px;
+		}
+		&__grid {
+			flex-direction: column;
+
+			&-item {
+				width: 100%;
+				border-radius: 10px;
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+
+				br {
+					display: none;
+
+				}
+				button{
+					width: 100%;
+				}
+			}
+		}
 	}
 }

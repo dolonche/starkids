@@ -44,5 +44,13 @@ $(document).ready(() => {
 			$('.popup-descr')[0].querySelector('.popup-descr__content').innerHTML = animatorItemDescr.innerHTML;
 
 		}
+		if (e.target.classList.contains('main-nav__toggle')) {
+			e.target.classList.toggle('main-nav__toggle--open');
+			$('.main-nav__list').slideToggle();
+		}
+		if (e.target.classList.contains('main-nav__list-item-link')) {
+			$('.main-nav__toggle')[0].classList.toggle('main-nav__toggle--open');
+			$('.main-nav__list').slideToggle();
+		}
 	});
 });

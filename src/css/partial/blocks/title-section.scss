@@ -9,7 +9,7 @@
 	width: 100%;
 	justify-content: center;
 	overflow: hidden;
-	
+
 
 	&::before {
 		content: "";
@@ -31,10 +31,29 @@
 		left: 0;
 		transform: translate(calc(50% + 169px), -50%);
 	}
-	&--w{
+
+	&--w {
 		color: #fff;
-		&::before, &::after{
+
+		&::before,
+		&::after {
 			background-color: #fff;
+		}
+	}
+}
+
+@media (max-width: 510px) {
+	.title-section {
+		font-size: 24px;
+
+		&::before {
+			display: none;
+			
+		}
+
+		&::after {
+			display: none;
+			
 		}
 	}
 }

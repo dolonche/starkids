@@ -27,12 +27,12 @@ $text-color: #000000;
   margin: 0 auto;
 
   @media #{$tablet-widths} {
-    width: 768px;
+    width: 100%;
   }
 
-  @media #{$mobile-widths} {
-    width: 320px;
-  }
+  // @media #{$mobile-widths} {
+  //   width: 320px;
+  // }
 }
 
 %grid-padding {

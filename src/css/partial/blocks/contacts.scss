@@ -109,3 +109,36 @@
 		}
 	}
 }
+
+@media #{$mobile-widths} {
+	.contacts {
+		&__link {
+			flex-direction: column;
+
+			&-mail {
+				margin-bottom: 30px;
+				width: 260px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			&-phone {
+				margin-bottom: 30px;
+				width: 260px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			&-social {
+				width: 260px;
+				margin-left: auto;
+				margin-right: auto;
+
+				&-item {
+					margin-left: 0;
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}

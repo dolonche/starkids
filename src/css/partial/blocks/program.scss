@@ -46,3 +46,28 @@
 		}
 	}
 }
+
+@media #{$tablet-widths} {
+	.program {
+		&__grid {
+			&-item {
+				padding-left: 0;
+				align-items: center;
+				&-name{
+					text-align: center;
+					
+				}
+			}
+		}
+	}
+}
+@media #{$mobile-widths}{
+	.program{
+		&__grid{
+			&-item{
+				width: calc(50% - 10px);
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

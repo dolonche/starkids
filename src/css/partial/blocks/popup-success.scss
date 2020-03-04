@@ -70,3 +70,8 @@
 		}
 	}
 }
+@media #{$mobile-widths}  {
+	.popup-success{
+		width: calc(100% - 20px);
+	}
+}

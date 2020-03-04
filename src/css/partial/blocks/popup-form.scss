@@ -151,3 +151,8 @@
 		}
 	}
 }
+@media #{$mobile-widths}  {
+	.popup-form{
+		width: calc(100% - 20px);
+	}
+}
